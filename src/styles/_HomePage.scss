@@ -1,0 +1,80 @@
+.circle {
+
+    &__full,
+    &__empty {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        color: white;
+        opacity: 0.1;
+    }
+
+    &__full {
+        font-size: 700px;
+    }
+
+    &__empty {
+        animation: circle 3s;
+        font-size: 650px;
+    }
+}
+
+.welcome {
+    color: white;
+
+    &__text-1 {
+        font-size: 70px;
+        animation: show 1s;
+    }
+
+    &__text-2 {
+        font-size: 45px;
+        animation: show 2s;
+    }
+
+    &__text-3 {
+        font-size: 24px;
+        border-top: solid white 3px;
+        padding-top: 12px;
+        animation: show 3s;
+    }
+}
+
+.btn {
+    &--read-more {
+        padding: 12px;
+        margin-top: 44px;
+        font-size: 16px;
+    }
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes circle {
+
+    0% {
+        font-size: 450px;
+    }
+
+    30% {
+        font-size: 300px;
+    }
+
+    100% {
+        font-size: 650px;
+    }
+}

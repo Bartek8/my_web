@@ -1,0 +1,12 @@
+.footer {
+    position: fixed;
+    bottom: 0px;
+    left: 7%;
+    height: 60px;
+    width: 100%;
+
+    &__icon {
+        font-size: 34px;
+        padding: 10px 12px;
+    }
+}

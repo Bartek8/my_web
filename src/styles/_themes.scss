@@ -1,0 +1,26 @@
+//ICON - github,fb etc.
+.icon-text {
+    text-decoration-line: none;
+    color: $primary-color;
+
+    &:hover {
+        color: $hover-color;
+    }
+}
+
+//UPPERCASE
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+//BUTTON
+.btn {
+    background-color: rgba(255, 255, 255, 0.0);
+    color: white;
+    border: solid white 2px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+}

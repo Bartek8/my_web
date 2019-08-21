@@ -1,0 +1,97 @@
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    animation: show 2s;
+
+    &__container {
+        position: relative;
+    }
+
+
+    &__item {
+        color: white;
+        font-size: 130px;
+        padding: 30px 40px;
+        flex-grow: 1;
+        width: 200px;
+        cursor: pointer;
+        transition: 0.2s;
+
+        &--orange:hover {
+            color: rgba(241, 124, 46, 0.8);
+        }
+
+        &--blue:hover {
+            color: rgba(20, 89, 238, 0.8);
+        }
+
+        &--violet:hover {
+            color: rgba(160, 69, 221, 0.8);
+        }
+
+        &--pink:hover {
+            color: rgba(206, 119, 214, 0.8);
+        }
+
+        &--yellow:hover {
+            color: rgba(238, 255, 0, 0.8);
+        }
+
+        &--azure:hover {
+            color: rgba(0, 255, 234, 0.8);
+        }
+
+        &--green:hover {
+            color: rgba(131, 224, 55, 0.8);
+        }
+
+        &--black:hover {
+            color: rgba(0, 0, 0, 0.8);
+        }
+
+        &--hide {
+            animation: hide 2s;
+            animation-fill-mode: forwards;
+            display: none;
+        }
+
+        &--text {
+            font-size: 13px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+            text-align: left;
+
+            &--active {
+                display: block;
+                width: 150px;
+                color: white;
+                animation: show 5s;
+                animation-fill-mode: forwards;
+            }
+        }
+    }
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes hide {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
