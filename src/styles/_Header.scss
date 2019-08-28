@@ -6,43 +6,96 @@
     &__list-element {
         list-style: none;
         padding: 20px 0;
-
-    }
-
-    &__item {
-        padding-bottom: 12px;
-
-        &--hover {
-            display: inline-block;
-            position: relative;
-            padding-left: 28px;
-            padding-right: 28px;
-            letter-spacing: 1px;
-
-            &::before {
-                content: "";
-                position: absolute;
-                width: 100%;
-                transform: scaleX(0);
-                height: 2px;
-                bottom: 0;
-                left: 0;
-                background-color: $hover-color;
-                transform-origin: bottom right;
-                transition: transform 0.45s ease-out;
-            }
-
-            &:hover::before {
-                transform: scaleX(1);
-                transform-origin: bottom left;
-            }
-
-        }
     }
 
     @include mq(medium) {
         display: none;
     }
+
+    &__item {
+        z-index: 10;
+
+        padding-bottom: 12px;
+
+        @media only screen and (min-width: 800px) {
+            &--hover {
+                display: inline-block;
+                position: relative;
+                padding-left: 28px;
+                padding-right: 28px;
+                letter-spacing: 1px;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    transform: scaleX(0);
+                    height: 2px;
+                    bottom: 0;
+                    left: 0;
+                    background-color: $hover-color;
+                    transform-origin: bottom right;
+                    transition: transform 0.45s ease-out;
+                }
+
+                &:hover::before {
+                    transform: scaleX(1);
+                    transform-origin: bottom left;
+                }
+            }
+        }
+
+        @include mq(medium) {
+            &--hover {
+                padding-left: 7%;
+
+                &:hover {
+                    border-left: 9px solid white;
+                }
+            }
+        }
+    }
+}
+
+.nav-burger {
+    display: none;
+
+    @media only screen and (max-width: 799px) {
+        display: block;
+    }
+
+    &__switch {
+        position: fixed;
+        width: 100%;
+        height: auto;
+        top: 0;
+        left: 0;
+        background-color: black;
+        z-index: 12;
+        animation: show-menu 2s ease-out;
+    }
+
+    &__show-burger {
+        cursor: pointer;
+        display: block;
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        color: white;
+        font-size: 44px;
+        z-index: 13;
+        transform: scaleY(0.4);
+        transition: 1s;
+    }
+
+    &__hide-burger {
+        color: $primary-color;
+        transform: scaleY(1)
+    }
+}
+
+.change {
+    display: none;
 }
 
 .modal {
@@ -210,6 +263,17 @@
 
     100% {
         transform: rotate(360deg)
+    }
+
+}
+
+@keyframes show-menu {
+    0% {
+        transform: translateY(-300px)
+    }
+
+    100% {
+        transform: translateY(0)
     }
 
 }

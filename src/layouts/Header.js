@@ -16,6 +16,11 @@ const handleClickImg = () => {
     document.querySelector('.modal-img').style.display = "none";
 }
 
+const handleBurgerClick = () => {
+    document.querySelector('.nav-burger__switch').classList.toggle("change");
+    document.querySelector('.nav-burger__show-burger').classList.toggle("nav-burger__hide-burger");
+}
+
 const modal = (
     <div className='modal modal--bg'>
         <div className="modal__content">
@@ -43,11 +48,18 @@ const Header = () => {
 
 
     return (
-        <ul className="nav">
+        <div>
             {modal}
             {modal_img}
-            {menu}
-        </ul>
+            <ul className="nav">
+                {menu}
+            </ul>
+            <ul className="nav-burger">
+                <div onClick={handleBurgerClick} className="nav-burger__show-burger"><i class="fas fa-bars"></i></div>
+                <div className="nav-burger__switch">{menu}</div>
+            </ul>
+        </div>
+
     )
 }
 
