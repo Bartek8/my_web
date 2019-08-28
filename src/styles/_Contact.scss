@@ -1,27 +1,80 @@
 .contact {
     width: 780px;
-    height: 500px;
+    height: auto;
     background-color: rgba(255, 255, 255, 0.3);
     border-radius: 15px;
-    color: white;
+    color: $primary-color;
     padding: 30px;
+    animation: show 1s;
+
+    @include mq(medium) {
+        width: 500px;
+    }
+
+    @include mq(xsmall) {
+        width: 300px;
+    }
 
     &__title {
         font-size: 36px;
+        color: white;
+
+        @include mq(medium) {
+            font-size: 22px;
+        }
+
+        @include mq(xsmall) {
+            font-size: 16px;
+        }
     }
 
     &__icons {
         text-align: left;
     }
 
+    &__link {
+        text-decoration: none;
+        color: $primary-color;
+
+        &:hover {
+            color: $hover-color;
+        }
+    }
+
     &__icon {
         font-size: 22px;
-        padding: 10px;
+        padding: 15px;
+        cursor: pointer;
+
+        @include mq(medium) {
+            font-size: 17px;
+        }
+
+        @include mq(xsmall) {
+            font-size: 12px;
+        }
 
         &--mail,
-        &--phone {
-            margin-right: 9px;
-            font-size: 26px
+        &--phone,
+        &--facebook,
+        &--github,
+        &--linkedin {
+            margin-right: 20px;
+            font-size: 36px;
+
+            @include mq(medium) {
+                margin-right: 16px;
+                font-size: 22px;
+            }
+
+            @include mq(xsmall) {
+                margin-right: 12px;
+                font-size: 18px;
+            }
+        }
+
+        &:hover {
+            color: $hover-color;
         }
     }
 }
@@ -50,6 +103,8 @@
         &--btn {
             width: 15%;
         }
+
+
     }
 
     &__textarea {
@@ -59,5 +114,19 @@
         border: 2px solid rgba(255, 255, 255, 0.4);
         width: 100%;
         height: 150px;
+    }
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }

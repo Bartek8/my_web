@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 const ContactPage = () => {
     return (
@@ -7,15 +8,14 @@ const ContactPage = () => {
             <div className="contact__icons">
                 <div className="contact__icon"><i class="contact__icon--mail fas fa-envelope"></i>bartlomiejwaszak1@gmail.com</div>
                 <div className="contact__icon"><i class="contact__icon--phone fas fa-phone"></i>725 913 233</div>
-            </div>
-            <form className='form'>
-                <div className='form__input'>
-                    <input className="form__input--name" type="text" placeholder="name..." />
-                    <input className="form__input--mail" type="text" placeholder="e-mail..." />
-                    <button className="form__input--btn text-uppercase" type='submit'>send!</button>
+                <div className="contact__icon"><a className="contact__link" href="https://www.facebook.com/waszak.b"><i class="fab fa-facebook-square contact__icon--facebook"></i>Facebook</a></div>
+                <div className="contact__icon">
+                    <a className="contact__link" href="https://github.com/Bartek8">
+                        <i class="fab fa-github-square contact__icon--github"></i>Github
+                    </a>
                 </div>
-                <textarea className='form__textarea' name="" id="" cols="30" rows="10" placeholder="message..."></textarea>
-            </form>
+                <div className="contact__icon"><a className="contact__link" href="https://www.linkedin.com/in/bart%C5%82omiej-waszak-aa7308190/"><i class="fab fa-linkedin-in contact__icon--linkedin"></i>Linkedin</a></div>
+            </div>
 
         </div>);
 }
