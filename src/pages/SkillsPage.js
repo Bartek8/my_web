@@ -3,35 +3,35 @@ import React from 'react';
 const skills = [{
     id: 0,
     item: 'fab fa-html5 skills__item skills__item--orange',
-    text: 'HTML - staram się pisać prosty html, aktualnie stosuję metodykę BEM'
+    text: 'HTML - is the standard markup language for documents designed to be displayed in a web browser. I\'m currently using the BEM methodology'
 }, {
     id: 1,
     item: "fab fa-css3-alt skills__item skills__item--blue",
-    text: 'CSS - najnowsze technologie nie są mi obce - flexbox, grid etc. '
+    text: 'CSS - is a style sheet language used for describing the presentation of a document written in HTML. In particular, I use: flexbox, grid, keyframes, media queries.'
 }, {
     id: 2,
     item: "fab fa-bootstrap skills__item skills__item--violet",
-    text: 'Bootstrap - potrafię stosować oraz customizować bootstrap na potrzeby strony'
+    text: 'Bootstrap - is an open source toolkit for developing with HTML, CSS, and JS. With a bootstrap you can quickly and easily make a website.'
 }, {
     id: 3,
     item: 'fab fa-sass skills__item skills__item--pink',
-    text: 'Sass - idealnie komponuję się metodyką BEM, przez co style są przejrzystsze oraz łatwe w rozbudowie'
+    text: 'Sass - Sass is a CSS preprocessor, which adds special features such as variables, nested rules and mixins into regular CSS. Sass fits BEM methodology perfectly'
 }, {
     id: 4,
     item: "fab fa-js skills__item skills__item--yellow",
-    text: 'JS - klasyczny JavaScript (aplikacje) oraz biblioteka jQuerry (strony internetowe)'
+    text: 'JavaScript - is a high-level, interpreted programming language for computers. To write less and faster, I use JS library jQuery'
 }, {
     id: 5,
     item: "fab fa-react skills__item skills__item--azure",
-    text: 'React - wykorzystanie technolgii reacta - single page app., rest api, zabezpieczenia'
+    text: 'React is a JavaScript library for building user interfaces, which offers a lot of options, such as: Virtual DOM, One-way data flow, JSX'
 }, {
     id: 6,
     item: "fab fa-node-js skills__item skills__item--green",
-    text: 'NodeJs - framework Express - technologia backendowa - API - systemy'
+    text: "Node.js - is a JavaScript runtime built on Chrome/'s V8 JavaScript engine. I use Node.js and Express (node framework) to create RESTapi, secure websites (hash password, JWT etc.)"
 }, {
     id: 7,
     item: "fab fa-github skills__item skills__item--black",
-    text: 'Github - znajomość umożliwiająca pracę w zespole'
+    text: 'Git is a distributed version-control system for tracking changes in source code during software development. Thanks to github, I can share my projects and work in a team on larger projects.'
 }]
 
 const handleClick = (e) => {

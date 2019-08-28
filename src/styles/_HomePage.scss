@@ -13,11 +13,27 @@
 
     &__full {
         font-size: 700px;
+
+        @include mq(medium) {
+            font-size: 450px;
+        }
+
+        @include mq(xsmall) {
+            font-size: 330px;
+        }
     }
 
     &__empty {
-        animation: circle 3s;
+        animation: circle 3s forwards;
         font-size: 650px;
+
+        @include mq(medium) {
+            animation: circle-md 3s forwards;
+        }
+
+        @include mq(xsmall) {
+            animation: circle-xsm 3s forwards;
+        }
     }
 }
 
@@ -27,11 +43,27 @@
     &__text-1 {
         font-size: 70px;
         animation: show 1s;
+
+        @include mq(medium) {
+            font-size: 50px;
+        }
+
+        @include mq(xsmall) {
+            font-size: 40px;
+        }
     }
 
     &__text-2 {
         font-size: 45px;
         animation: show 2s;
+
+        @include mq(medium) {
+            font-size: 32px;
+        }
+
+        @include mq(xsmall) {
+            font-size: 20px;
+        }
     }
 
     &__text-3 {
@@ -39,14 +71,43 @@
         border-top: solid white 3px;
         padding-top: 12px;
         animation: show 3s;
+
+        @include mq(medium) {
+            font-size: 20px;
+        }
+
+        @include mq(xsmall) {
+            font-size: 16px;
+        }
     }
 }
 
 .btn {
     &--read-more {
+        animation: vibration 4s 5s infinite;
+    }
+
+    &--read-more,
+    &--cv {
         padding: 12px;
         margin-top: 44px;
         font-size: 16px;
+
+        @include mq(medium) {
+            font-size: 14px;
+            margin-top: 30px;
+            padding: 10px;
+        }
+
+        @include mq(xsmall) {
+            font-size: 12px;
+            margin-top: 20px;
+            padding: 8px;
+        }
+    }
+
+    &--cv {
+        margin-left: 10px;
     }
 }
 
@@ -76,5 +137,54 @@
 
     100% {
         font-size: 650px;
+    }
+}
+
+@keyframes circle-md {
+
+    0% {
+        font-size: 300px;
+    }
+
+    30% {
+        font-size: 200px;
+    }
+
+    100% {
+        font-size: 400px;
+    }
+}
+
+@keyframes circle-xsm {
+
+    0% {
+        font-size: 200px;
+    }
+
+    30% {
+        font-size: 100px;
+    }
+
+    100% {
+        font-size: 300px;
+    }
+}
+
+@keyframes vibration {
+
+    0%,
+    2%,
+    4% {
+        transform: rotate(2deg)
+    }
+
+    1%,
+    3% {
+        transform: rotate(-2deg)
+    }
+
+    5%,
+    100% {
+        transform: rotate(0deg)
     }
 }

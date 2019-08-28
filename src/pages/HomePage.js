@@ -7,6 +7,10 @@ class HomePage extends React.Component {
         document.querySelector('.modal').style.display = "block";
     }
 
+    handleClickImg = () => {
+        document.querySelector('.modal-img').style.display = "block";
+    }
+
     render() {
         return (
             <div>
@@ -20,6 +24,7 @@ class HomePage extends React.Component {
                     <p className="welcome__text-3">Welcome to my portfolio page</p>
                 </div>
                 <button onClick={this.handleClick} className='text-uppercase btn btn--read-more'>read more</button>
+                <button onClick={this.handleClickImg} className='text-uppercase btn btn--cv'>cv</button>
             </div>
         );
     }

@@ -1,3 +1,19 @@
 $primary-color: rgba(255, 255, 255, 0.7);
 $secondary-color: rgba(255, 255, 255, 0.9);
 $hover-color: rgba(255, 255, 255, 1);
+
+$breakpoints: (xsmall: (max-width: 460px), small: (max-width: 640px), medium: (max-width: 800px), large: (max-width: 1024px), xlarge: (max-width: 1200px), xxlarge: (max-width: 1440px));
+
+@mixin mq($breakpoint) {
+    $size: map-get($breakpoints, $breakpoint);
+
+    @if($size) {
+        @media #{$size} {
+            @content;
+        }
+    }
+
+    @else {
+        @error '"#{$breakpoint}" - błąd';
+    }
+}

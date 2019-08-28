@@ -67,10 +67,13 @@
 
             &--active {
                 display: block;
-                width: 150px;
+                width: 160px;
                 color: white;
                 animation: show 5s;
                 animation-fill-mode: forwards;
+                background-color: rgba(255, 255, 255, 0.2);
+                border-radius: 5px;
+                padding: 8px;
             }
         }
     }
