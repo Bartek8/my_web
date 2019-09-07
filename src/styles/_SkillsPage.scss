@@ -3,10 +3,12 @@
     flex-wrap: wrap;
     justify-content: space-around;
     animation: show 2s;
-    margin-top: 110px;
+    margin-top: 130px;
+    max-height: 90vh;
 
     &__container {
         position: relative;
+        margin: 4px;
     }
 
 
@@ -72,7 +74,7 @@
         }
 
         &--text {
-            font-size: 13px;
+            font-size: 15px;
             position: absolute;
             top: 50%;
             left: 50%;
@@ -81,16 +83,16 @@
             text-align: left;
 
             @include mq(xlarge) {
-                font-size: 8px;
+                font-size: 13px;
             }
 
             @include mq(small) {
-                font-size: 7px;
+                font-size: 9px;
             }
 
             &--active {
                 display: block;
-                width: 160px;
+                width: 190px;
                 color: white;
                 animation: show 5s;
                 animation-fill-mode: forwards;
@@ -99,11 +101,11 @@
                 padding: 8px;
 
                 @include mq(xlarge) {
-                    width: 120px;
+                    width: 170px;
                 }
 
                 @include mq(small) {
-                    width: 100px;
+                    width: 150px;
                 }
             }
         }

@@ -108,11 +108,11 @@
         position: absolute;
         top: 0;
         left: 0;
-        z-index: 3;
+        z-index: 22;
     }
 
     &__content {
-        padding: 14px;
+        padding: 22px;
         background-color: white;
         height: auto;
         width: 500px;
@@ -183,87 +183,78 @@
         position: absolute;
         top: 0;
         left: 0;
-        z-index: 3;
+        z-index: 22;
     }
 
-    &__content-img {
-        width: auto;
-        height: 85%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+    &__container {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
 
-        @include mq(medium) {
-            height: 78%;
-        }
-
-        @include mq(xsmall) {
-            height: 60%;
-        }
-    }
-
-    &__close-img {
-        position: absolute;
-        top: 8%;
-        left: 50%;
-
-        @include mq(medium) {
-            top: 10%;
-        }
-
-        @include mq(xsmall) {
-            top: 14%;
-        }
-
-        transform: translateX(-50%);
-
-        .fa-times {
-            font-size: 38px;
-            color: #3f9357;
-            padding: 8px;
-            cursor: pointer;
-            animation: spin 8s infinite ease;
-
-            @include mq(xxlarge) {
-                font-size: 38px;
-            }
-
-            @include mq(xlarge) {
-                font-size: 34px;
-            }
-
-            @include mq(large) {
-                font-size: 31px;
-            }
+        &-img {
+            width: auto;
+            height: 85%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
 
             @include mq(medium) {
-                font-size: 28px;
-            }
-
-            @include mq(small) {
-                font-size: 24px;
+                height: 78%;
             }
 
             @include mq(xsmall) {
-                font-size: 22px;
+                height: 60%;
+            }
+        }
+
+        &-btn {
+            position: absolute;
+            top: 5%;
+            right: 5%;
+
+            @include mq(xsmall) {
+                top: 2%;
+                right: 2%;
+            }
+
+            .fa-times {
+                font-size: 44px;
+                color: #3f9357;
+                cursor: pointer;
+                background-color: white;
+                border-radius: 50%;
+                width: 80px;
+                height: 80px;
+                text-align: center;
+                line-height: 80px;
+
+                @include mq(xxlarge) {
+                    font-size: 38px;
+                    width: 60px;
+                    height: 60px;
+                    line-height: 60px;
+                }
+
+                @include mq(large) {
+                    font-size: 31px;
+                    width: 40px;
+                    height: 40px;
+                    line-height: 40px;
+                }
+
+                @include mq(small) {
+                    font-size: 25px;
+                    width: 32px;
+                    height: 32px;
+                    line-height: 32px;
+                }
             }
         }
     }
-}
 
-@keyframes spin {
-    0% {
-        color: #3f9357;
-    }
-
-    50% {
-        color: #13558e;
-    }
-
-    100% {
-        transform: rotate(360deg)
-    }
 
 }
 

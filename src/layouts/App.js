@@ -8,7 +8,6 @@ import Page from './Page'
 
 function App() {
   return (
-
     < Router >
       <header>
         <Header />
