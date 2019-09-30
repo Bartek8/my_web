@@ -1,0 +1,23 @@
+.project {
+    &__text-1 {
+        color: $primary-color;
+        font-size: 26px;
+    }
+
+    &__text-2 {
+        color: $primary-color;
+        font-size: 16px;
+        text-decoration: underline;
+    }
+
+    &__icon-github {
+        font-size: 100px;
+        color: black;
+        transition: 0.2s;
+
+        &:hover {
+            color: $hover-color;
+            cursor: pointer;
+        }
+    }
+}
