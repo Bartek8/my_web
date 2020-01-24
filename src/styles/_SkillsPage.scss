@@ -74,40 +74,15 @@
         }
 
         &--text {
-            font-size: 15px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            display: none;
-            text-align: left;
-
-            @include mq(xlarge) {
-                font-size: 13px;
-            }
-
-            @include mq(small) {
-                font-size: 9px;
-            }
-
-            &--active {
-                display: block;
-                width: 190px;
-                color: white;
-                animation: show 5s;
-                animation-fill-mode: forwards;
-                background-color: rgba(255, 255, 255, 0.2);
-                border-radius: 5px;
-                padding: 8px;
-
-                @include mq(xlarge) {
-                    width: 170px;
-                }
-
-                @include mq(small) {
-                    width: 150px;
-                }
-            }
+            color: white;
+            font-size: 17px;
+            width: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            border: white solid 1px;
+            padding: 10px;
+            letter-spacing: 1.4px;
+            font-weight: 700;
         }
     }
 }
