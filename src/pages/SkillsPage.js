@@ -1,27 +1,22 @@
 import React from 'react';
 import { SkillItem } from '../components/SkillItem'
+import { Tooltip, OverlayTrigger } from 'react-bootstrap'
 
-
-const handleClick = (e) => {
-    document.getElementById(e.target.id).classList.add('skills__item--hide');
-    document.querySelector(`.text-${e.target.id}`).classList.add('skills__item--text--active')
-}
 
 const SkillsPage = () => {
-
     const elements = SkillItem.map(element => (
-        <div className="skills__container" >
-            <i onClick={handleClick} id={element.id} class={element.item}></i>
-            <p className={`skills__item--text text-${element.id}`}>{element.text}</p>
-        </div>
+        <OverlayTrigger
+            placement="auto"
+            delay={{ show: 200, hide: 400 }}
+            overlay={<div className="skills__item--text"><Tooltip>{element.text}</Tooltip></div>}
+        >
+            <div className={element.item}></div>
 
+        </OverlayTrigger>
     ));
-
     return (
-        <div className='skills'  >
-            {elements}
-        </div>
-    )
+        <div className="skills skills__container">{elements}</div>
+    );
 }
 
 export default SkillsPage;
