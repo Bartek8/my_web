@@ -17,3 +17,15 @@ $breakpoints: (xsmall: (max-width: 460px), small: (max-width: 640px), medium: (m
         @error '"#{$breakpoint}" - błąd';
     }
 }
+
+@mixin keyframes($name) {
+    @keyframes #{$name} {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+}

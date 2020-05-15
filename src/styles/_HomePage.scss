@@ -38,11 +38,12 @@
 }
 
 .welcome {
-    color: white;
+    color: $primary-color;
 
     &__text-1 {
+        color: white;
         font-size: 70px;
-        animation: show 1s;
+        animation: show-element 3s;
 
         @include mq(medium) {
             font-size: 50px;
@@ -55,7 +56,7 @@
 
     &__text-2 {
         font-size: 45px;
-        animation: show 2s;
+        animation: show-element 2s;
 
         @include mq(medium) {
             font-size: 32px;
@@ -70,7 +71,7 @@
         font-size: 24px;
         border-top: solid white 3px;
         padding-top: 12px;
-        animation: show 3s;
+        animation: show-element 3s;
 
         @include mq(medium) {
             font-size: 20px;
@@ -82,48 +83,20 @@
     }
 }
 
-.btn {
-    &--read-more {
-        animation: vibration 4s 5s infinite;
-    }
+.modal-button {
 
-    &--read-more,
-    &--cv {
-        padding: 12px;
-        margin-top: 44px;
-        font-size: 16px;
+    animation: vibration 4s 5s infinite;
 
-        @include mq(medium) {
-            font-size: 14px;
-            margin-top: 30px;
-            padding: 10px;
-        }
-
-        @include mq(xsmall) {
-            font-size: 12px;
-            margin-top: 20px;
-            padding: 8px;
-        }
-    }
-
-    &--cv {
-        margin-left: 10px;
+    &:hover {
+        color: transparent;
     }
 }
 
-@keyframes show {
-    0% {
-        opacity: 0;
-    }
-
-    40% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
+.modal-image {
+    width: 100%;
 }
+
+@include keyframes(show-element);
 
 @keyframes circle {
 

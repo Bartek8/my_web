@@ -1,13 +1,16 @@
 .project {
-    &__text-1 {
-        color: $primary-color;
-        font-size: 26px;
+    margin-top: 10vh;
+
+    @include mq(large) {
+        margin-top: 30vh;
     }
 
-    &__text-2 {
-        color: $primary-color;
-        font-size: 16px;
-        text-decoration: underline;
+    @include mq(medium) {
+        margin-top: 45vh;
+    }
+
+    @include mq(small) {
+        margin-top: 50vh;
     }
 
     &__icon-github {
@@ -21,3 +24,66 @@
         }
     }
 }
+
+.project-item {
+    width: 70vw;
+
+    @include mq(medium) {
+        width: 80vw;
+        font-size: 14px;
+    }
+
+    @include mq(small) {
+        width: 90vw;
+    }
+
+
+
+    color: $primary-color;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    border-radius: 15px;
+    margin: 30px;
+    animation: show-element 1s;
+    text-align: left;
+
+    span {
+        color: black;
+    }
+
+    &__name {
+        color: $secondary-color;
+        text-transform: uppercase;
+    }
+
+    &__desc {
+        margin-top: 20px;
+    }
+
+    &__technologies {
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.2);
+        padding: 10px;
+
+
+        &--item {
+            display: inline;
+            margin: 26px;
+            padding: 10px;
+        }
+    }
+
+    &__code,
+    &__live {
+        text-decoration: none;
+        color: $primary-color;
+
+        &:hover {
+            color: black;
+            transition-duration: 1s;
+            text-decoration: none;
+        }
+    }
+}
+
+@include keyframes(show-element);

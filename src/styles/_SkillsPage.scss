@@ -2,7 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    animation: show 2s;
+    animation: show-element 2s;
     margin-top: 130px;
     max-height: 90vh;
 
@@ -17,12 +17,12 @@
         font-size: 130px;
         padding: 30px 40px;
         flex-grow: 1;
-        width: 200px;
+        width: 220px;
         cursor: pointer;
         transition: 0.2s;
 
         @include mq(xlarge) {
-            font-size: 100px;
+            font-size: 120px;
             width: 180px;
         }
 
@@ -35,35 +35,35 @@
             font-size: 50px;
         }
 
-        &--orange:hover {
-            color: rgba(241, 124, 46, 0.8);
+        &--html:hover {
+            color: #eb7846;
         }
 
-        &--blue:hover {
-            color: rgba(20, 89, 238, 0.8);
+        &--css:hover {
+            color: #293eff;
         }
 
-        &--violet:hover {
-            color: rgba(160, 69, 221, 0.8);
+        &--js:hover {
+            color: #f0eb62;
         }
 
-        &--pink:hover {
-            color: rgba(206, 119, 214, 0.8);
+        &--react:hover {
+            color: #62dff0;
         }
 
-        &--yellow:hover {
-            color: rgba(238, 255, 0, 0.8);
+        &--vue:hover {
+            color: #82cf93;
         }
 
-        &--azure:hover {
-            color: rgba(0, 255, 234, 0.8);
+        &--angular:hover {
+            color: #d53333;
         }
 
-        &--green:hover {
-            color: rgba(131, 224, 55, 0.8);
+        &--node:hover {
+            color: #38b82a;
         }
 
-        &--black:hover {
+        &--other:hover {
             color: rgba(0, 0, 0, 0.8);
         }
 
@@ -87,15 +87,7 @@
     }
 }
 
-@keyframes show {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
+@include keyframes(show-element);
 
 @keyframes hide {
     0% {

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
 
 const ContactPage = () => {
     return (
@@ -16,7 +15,6 @@ const ContactPage = () => {
                 </div>
                 <div className="contact__icon"><a className="contact__link" href="https://www.linkedin.com/in/bart%C5%82omiej-waszak-aa7308190/"><i class="fab fa-linkedin-in contact__icon--linkedin"></i>Linkedin</a></div>
             </div>
-
         </div>);
 }
 

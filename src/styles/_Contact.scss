@@ -5,26 +5,28 @@
     border-radius: 15px;
     color: $primary-color;
     padding: 30px;
-    animation: show 1s;
+    animation: show-element 1s;
 
     @include mq(medium) {
-        width: 500px;
+        width: 80vw;
+        padding: 22px;
     }
 
     @include mq(xsmall) {
-        width: 300px;
+        width: 90vw;
+        padding: 10px;
     }
 
     &__title {
         font-size: 36px;
-        color: white;
+        color: black;
 
         @include mq(medium) {
-            font-size: 22px;
+            font-size: 25px;
         }
 
         @include mq(xsmall) {
-            font-size: 16px;
+            font-size: 20px;
         }
     }
 
@@ -47,11 +49,13 @@
         cursor: pointer;
 
         @include mq(medium) {
-            font-size: 17px;
+            font-size: 18px;
+            padding: 13px;
         }
 
         @include mq(xsmall) {
-            font-size: 12px;
+            font-size: 15px;
+            padding: 10px;
         }
 
         &--mail,
@@ -103,8 +107,6 @@
         &--btn {
             width: 15%;
         }
-
-
     }
 
     &__textarea {
@@ -117,16 +119,4 @@
     }
 }
 
-@keyframes show {
-    0% {
-        opacity: 0;
-    }
-
-    40% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
+@include keyframes(show-element);
